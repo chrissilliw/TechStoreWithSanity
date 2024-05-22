@@ -16,7 +16,8 @@ const Navbar = () => {
   return (
     <>
       <div className="py-6">
-        <div className="flex items-center justify-between mx-auto max-w-2xl sm:px-6 lg:max-w-6xl">
+        <div className="">hamburger</div>
+        <div className="flex items-center justify-between mx-auto sm:px-6 lg:max-w-6xl">
           {/* LOGO CONTAINER */}
           <Link href="/">
             <h1 className="text-4xl font-bold">MHz Data</h1>

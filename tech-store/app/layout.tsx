@@ -25,9 +25,7 @@ export default function RootLayout({
           <StateContextProvider>
             <Toaster />
             <Navbar />
-            <div className="mx-auto max-w-2xl sm:px-6 lg:max-w-6xl">
-              {children}
-            </div>
+            <div className="mx-auto sm:px-6 lg:max-w-6xl">{children}</div>
           </StateContextProvider>
         </AuthProvider>
       </body>
