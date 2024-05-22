@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import Navbar from "./components/Navbar/Navbar";
 import { StateContextProvider } from "./context/StateContext";
+import AuthProvider from "./auth/Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,13 +21,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <StateContextProvider>
-          <Toaster />
-          <Navbar />
-          <div className="mx-auto max-w-2xl sm:px-6 lg:max-w-6xl">
-            {children}
-          </div>
-        </StateContextProvider>
+        <AuthProvider>
+          <StateContextProvider>
+            <Toaster />
+            <Navbar />
+            <div className="mx-auto max-w-2xl sm:px-6 lg:max-w-6xl">
+              {children}
+            </div>
+          </StateContextProvider>
+        </AuthProvider>
       </body>
     </html>
   );

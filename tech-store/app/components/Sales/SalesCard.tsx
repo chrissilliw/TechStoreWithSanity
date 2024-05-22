@@ -13,12 +13,16 @@ const SalesCard = ({ product }: SalesCardProps) => {
     <>
       <Link href={`/product/horlurar/${product.slug}`}>
         <div className="">
-          <div className="relative min-w-[200px] max-w-[300px] bg-gray-100 rounded-lg">
+          <div className="relative w-full min-h-[200px] min-w-[200px] max-w-[300px] bg-gray-100 rounded-lg">
             <Image
               src={product.imageUrl}
               alt={product.name}
-              width={300}
-              height={300}
+              // width={300}
+              loading="lazy"
+              priority={false}
+              // height={300}
+              fill
+              sizes="(min-width: 150px) 100%"
               className="w-[500px] object-contain rounded-xl mb-4 transition duration-300 ease-in-out hover:scale-[1.05] drop-shadow-md hover:drop-shadow-2xl cursor-pointer"
             />
           </div>

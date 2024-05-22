@@ -41,8 +41,10 @@ const HeaderBanner = () => {
                 // src={urlFor(banner?.imageUrl).url()}
                 src={banner?.imageUrl}
                 fill
-                objectFit="contain"
+                sizes="(max-width: 250px) 100%"
+                style={{ objectFit: "contain" }}
                 alt="bild"
+                loading="lazy"
               />
             </div>
           </>

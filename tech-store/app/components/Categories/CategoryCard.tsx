@@ -26,6 +26,8 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
               src={category.imageUrl}
               alt={category.name}
               fill
+              sizes="(min-width: 200px) 100%"
+              loading="lazy"
               className="h-full object-cover rounded-2xl transition duration-1000 ease group-hover:scale-[1.15] "
             />
           </div>

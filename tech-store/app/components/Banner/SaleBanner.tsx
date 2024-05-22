@@ -40,7 +40,10 @@ const SaleBanner = () => {
               <Image
                 src={banner.imageUrl}
                 fill
-                objectFit="contain"
+                sizes="(max-width: 400px) 100%"
+                style={{ objectFit: "contain" }}
+                loading="lazy"
+                priority={false}
                 alt="bild"
               />
             </div>

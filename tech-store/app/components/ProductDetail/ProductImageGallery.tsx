@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { urlFor } from "@/app/lib/sanity";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface ProductImageGalleryProps {
   images?: any;
@@ -19,7 +20,20 @@ const ProductImageGallery = ({ images }: ProductImageGalleryProps) => {
   }, [images]);
 
   if (!images) {
-    return <div className="w-[100%] h-[400px] bg-sky-700"></div>;
+    return (
+      <div className="flex w-[800px] h-auto gap-4">
+        {/* <ProductImageGallery images={product?.images} /> */}
+        <div className="flex flex-col gap-3">
+          {"abcd".split("").map((i, index) => (
+            <Skeleton
+              className="w-[180px] h-auto rounded-lg aspect-square"
+              key={index}
+            />
+          ))}
+        </div>
+        <Skeleton className="w-[500px] h-[500px] aspect-ratio rounded-xl" />
+      </div>
+    );
   }
 
   const handleSmallImageClick = (image: any) => {
@@ -39,6 +53,8 @@ const ProductImageGallery = ({ images }: ProductImageGalleryProps) => {
               width={200}
               height={200}
               alt="photo"
+              priority={false}
+              loading="lazy"
               className="h-full object-cover object-center cursor-pointer"
               onClick={() => handleSmallImageClick(image)}
             />
@@ -53,6 +69,8 @@ const ProductImageGallery = ({ images }: ProductImageGalleryProps) => {
             alt="photo"
             width={500}
             height={500}
+            priority={false}
+            loading="lazy"
             className="w-full h-auto object-cover object-center rounded-xl p-9 bg-gray-100"
           />
         </div>

@@ -1,4 +1,10 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/(pages)/product/[...slug]/page": "app/(pages)/product/[...slug]/page.js",
+  "/(pages)/datorer/page": "app/(pages)/datorer/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/(pages)/smartklockor/page": "app/(pages)/smartklockor/page.js",
   "/page": "app/page.js",
+  "/(pages)/horlurar/page": "app/(pages)/horlurar/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js"
 }
