@@ -6,6 +6,8 @@ import { ICartItem } from "../models/ICartItem";
 interface StateContextType {
   showCart: boolean; //Show or hide Cart from right side
   setShowCart: React.Dispatch<React.SetStateAction<boolean>>;
+  openMenu: boolean; //Show or hide Cart from right side
+  setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
   cartItems: any[];
   setCartItems: React.Dispatch<React.SetStateAction<any[]>>;
   totalPrice: number;
@@ -28,6 +30,8 @@ interface StateContextProviderProps {
 const StateContext = createContext<StateContextType>({
   showCart: false,
   setShowCart: () => {},
+  openMenu: false,
+  setOpenMenu: () => {},
   cartItems: [],
   setCartItems: () => {},
   totalPrice: 0,
@@ -49,6 +53,7 @@ export const StateContextProvider = ({
   children,
 }: StateContextProviderProps) => {
   const [showCart, setShowCart] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
   const [cartItems, setCartItems] = useState<any[]>([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantities] = useState(0);
@@ -146,6 +151,8 @@ export const StateContextProvider = ({
   const value: StateContextType = {
     showCart,
     setShowCart,
+    openMenu,
+    setOpenMenu,
     cartItems,
     setCartItems,
     totalPrice,
