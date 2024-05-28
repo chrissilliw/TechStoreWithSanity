@@ -17,8 +17,8 @@
 /coverage
 
 # next.js
-/tech-store/.next
-# /tech-store/.next/cache
+/tech-store/.next/
+/tech-store/.next/cache
 /tech-store/out/
 
 # production
