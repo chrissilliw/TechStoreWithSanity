@@ -23,6 +23,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
               alt={product.name}
               width={300}
               height={300}
+              loading="lazy"
               className="w-[500px] object-contain mb-4 transition duration-300 ease-in-out hover:scale-[1.05] drop-shadow-md hovver:drop-shadow-2xl cursor-pointer"
             />
           </div>
