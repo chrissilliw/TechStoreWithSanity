@@ -23,7 +23,7 @@ const SaleBanner = () => {
 
   return (
     <>
-      <div className="relative w-[100%] max-w-2xl sm:px-6 lg:max-w-6xl h-[400px] my-14 mx-auto flex rounded-2xl text-white bg-[#F02D34] gap-2">
+      <div className="relative w-[100%] sm:px-6 lg:max-w-6xl h-[400px] my-14 mx-auto max-sm:py-20 flex max-sm:flex-col max-sm:h-auto rounded-2xl text-white bg-[#F02D34] gap-2">
         {banner ? (
           <>
             <div className="flex flex-col justify-center px-8 gap-4">
@@ -36,7 +36,7 @@ const SaleBanner = () => {
                 <p>{banner.smallText}</p>
               </div>
             </div>
-            <div className="relative top-[-1%] right-0 w-[60%] aspect-auto h-auto mx-0">
+            <div className="relative top-[-1%] right-0 w-[60%] aspect-auto h-auto mx-0 max-md:hidden">
               <Image
                 src={banner.imageUrl}
                 fill

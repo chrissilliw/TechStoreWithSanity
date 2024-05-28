@@ -40,7 +40,7 @@ const PopularProductsGrid = () => {
 
   return (
     <>
-      <div className="w-full grid grid-cols-5 gap-5">
+      <div className="w-full grid grid-cols-4 max-lg:grid-cols-2 gap-5">
         {products.map((product) => (
           <div className="col-span-1" key={product._id}>
             <PopularProductCard product={product} productImage={image} />

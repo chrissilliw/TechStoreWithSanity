@@ -90,7 +90,7 @@ const MobileMenu = () => {
             initial="closed"
             animate="opened"
             exit="exit"
-            className="absolute top-0 left-0 h-screen w-[200px] pt-28 pl-5 flex flex-col bg-slate-400 z-40"
+            className="absolute top-0 left-0 h-screen w-[200px] pt-28 pl-5 flex flex-col bg-white z-40"
           >
             {links.map((link) => (
               <motion.div

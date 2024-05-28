@@ -16,7 +16,7 @@ const ProductBanner = ({ banner }: ProductBannerProps) => {
 
   return (
     <>
-      <div className="relative flex justify-between w-[100%] max-w-2xl sm:px-6 lg:max-w-6xl h-[400px] mx-auto rounded-2xl bg-slate-200 gap-10">
+      <div className="relative flex justify-between w-[100%] sm:px-6 lg:max-w-6xl h-[400px] mx-auto rounded-2xl bg-slate-200 gap-10">
         {banner ? (
           <>
             {/* <div className="flex justify-between"> */}

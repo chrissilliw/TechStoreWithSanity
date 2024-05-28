@@ -51,7 +51,7 @@ const Navbar = () => {
   return (
     <>
       <div className="py-6">
-        <div className="flex items-center justify-between mx-auto sm:px-6 lg:max-w-6xl">
+        <div className="relative flex items-center justify-between mx-auto px-6 max-sm:px-3 lg:max-w-6xl">
           {/* HAMBURGER BUTTON CONTAINER */}
           <div className="lg:hidden">
             <button
@@ -76,11 +76,16 @@ const Navbar = () => {
             </button>
           </div>
           {/* LOGO CONTAINER */}
-          <Link href="/">
-            <h1 className="text-4xl font-bold">MHz Data</h1>
+          <Link
+            href="/"
+            className="max-lg:absolute max-lg:left-[50%] max-lg:translate-x-[-50%]"
+          >
+            <h1 className="text-2xl max-sm:text-lg md:text-4xl font-bold">
+              MHz Data
+            </h1>
           </Link>
           {/* NAVBAR LINKS CONTAINER */}
-          <div className="flex items-center h-auto gap-10">
+          <div className="flex max-sm:flex-col items-end h-auto gap-10 max-lg:gap-1">
             <nav className="hidden lg:flex gap-4">
               {links.map((link) => (
                 <NavLink link={link} key={link.title} />

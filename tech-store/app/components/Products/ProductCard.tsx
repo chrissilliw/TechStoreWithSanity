@@ -1,4 +1,5 @@
 import { IProduct } from "@/app/models/IProduct";
+import { formatPrice } from "@/app/utils/formatPrice";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -8,6 +9,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
+  formatPrice;
   return (
     <>
       <Link
@@ -15,7 +17,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         className="cursor-pointer"
       >
         <div className="">
-          <div className="relative min-w-[200px] max-w-[300px] bg-gray-100 rounded-xl">
+          <div className="relative max-w-[300px] bg-gray-100 rounded-xl">
             <Image
               src={product.imageUrl}
               alt={product.name}
@@ -26,7 +28,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </div>
           <div className="flex flex-col gap-y-1">
             <p>{product.name}</p>
-            <p className="font-semibold">{product.price}:-</p>
+            <p className="font-semibold">{formatPrice(product.price)}:-</p>
           </div>
         </div>
       </Link>

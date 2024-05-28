@@ -41,12 +41,12 @@ const ProductImageGallery = ({ images }: ProductImageGalleryProps) => {
   };
 
   return (
-    <div className="flex relative w-[100%] gap-4">
-      <div className="flex flex-col gap-4">
+    <div className="flex relative w-[100%] max-sm:flex-col gap-4 max-lg:gap-2">
+      <div className="flex flex-col max-sm:flex-row gap-4 max-lg:gap-2 max-sm:order-last">
         {images.map((image: any, idx: any) => (
           <div
             key={idx}
-            className="overflow-hidden rounded-lg aspect-square bg-gray-100"
+            className="overflow-hidden flex max-lg:p-2 rounded-lg aspect-square bg-gray-100"
           >
             <Image
               src={urlFor(image).url()}

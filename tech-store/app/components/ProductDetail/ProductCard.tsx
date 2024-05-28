@@ -25,7 +25,6 @@ const ProductCard = ({ params: { slug } }: Props) => {
   }, []);
   return (
     <>
-      {/* <div className=""></div> */}
       <h3>{product?.name}</h3>
     </>
   );

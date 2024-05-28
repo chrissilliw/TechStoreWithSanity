@@ -113,7 +113,7 @@ const Cart = () => {
             initial="closed"
             animate="opened"
             exit="exit"
-            className="absolute inset top-0 right-0 px-5 py-6 w-[500px] h-screen bg-slate-50 z-20"
+            className="absolute inset top-0 right-0 px-5 max-sm:px-2 py-8 w-[450px] max-sm:w-[100%] h-screen bg-slate-50 z-50"
           >
             <button
               type="button"
@@ -139,11 +139,11 @@ const Cart = () => {
                         width={200}
                         height={200}
                         alt={item?.name}
-                        className="w-[120px] height-auto bg-gray-200 rounded-lg"
+                        className="w-[120px] max-sm:w-[100px] height-auto bg-gray-200 rounded-lg"
                       />
                       <div className="w-full flex flex-col justify-between">
                         <div className="flex top justify-between">
-                          <h4 className="text-sm font-semibold w-[230px]">
+                          <h4 className="text-sm font-semibold w-[230px] max-sm:w-[200px]">
                             {item.name}
                           </h4>
                           <h4>{item.price * item.quantity}:-</h4>

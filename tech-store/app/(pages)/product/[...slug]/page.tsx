@@ -8,6 +8,7 @@ import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useStateContext } from "@/app/context/StateContext";
 import Link from "next/link";
+import { formatPrice } from "@/app/utils/formatPrice";
 
 interface Props {
   params: { slug: string[] };
@@ -40,18 +41,18 @@ const ProductPage = ({ params: { slug } }: Props) => {
   }, [slugId2]);
   return (
     <>
-      <div className="flex gap-9">
-        <div className="w-[800px] h-auto">
+      <div className="flex max-md:flex-col gap-9 max-lg:gap-5">
+        <div className="max-w-[800px] h-auto">
           <ProductImageGallery images={product?.images} />
         </div>
-        <div className="flex flex-col max-w-[400px] gap-4">
+        <div className="flex flex-col max-w-[400px] gap-4 max-md:max-w-full">
           <p>{product?.categoryName}</p>
           <h2 className="text-2xl font-semibold">{product?.name}</h2>
           <h4 className="font-semibold">Kort om produkten</h4>
           <p className="text-base text-gray-800 tracking-wide">
             {product?.description}
           </p>
-          <p className="text-4xl font-bold">{product?.price}:-</p>
+          <p className="text-4xl font-bold">{formatPrice(product!.price)}:-</p>
           <div className="flex items-center gap-2 text-gray-500">
             <MdOutlineLocalShipping size={28} />
             <span className="text-sm">Leverans 1-2 dagar</span>
