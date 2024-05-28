@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import Navbar from "./components/Navbar/Navbar";
 import { StateContextProvider } from "./context/StateContext";
 import AuthProvider from "./auth/Provider";
+import Footer from "./components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,9 +26,10 @@ export default function RootLayout({
           <StateContextProvider>
             <Toaster />
             <Navbar />
-            <div className="mx-auto px-6 md:px-6 max-sm:px-2 lg:max-w-6xl">
+            <main className="mx-auto px-6 md:px-6 max-sm:px-2 lg:max-w-6xl">
               {children}
-            </div>
+            </main>
+            <Footer />
           </StateContextProvider>
         </AuthProvider>
       </body>

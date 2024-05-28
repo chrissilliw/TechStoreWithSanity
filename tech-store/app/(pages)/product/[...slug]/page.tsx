@@ -52,7 +52,7 @@ const ProductPage = ({ params: { slug } }: Props) => {
           <p className="text-base text-gray-800 tracking-wide">
             {product?.description}
           </p>
-          <p className="text-4xl font-bold">{formatPrice(product!.price)}:-</p>
+          <p className="text-4xl font-bold">{formatPrice(product?.price)}:-</p>
           <div className="flex items-center gap-2 text-gray-500">
             <MdOutlineLocalShipping size={28} />
             <span className="text-sm">Leverans 1-2 dagar</span>

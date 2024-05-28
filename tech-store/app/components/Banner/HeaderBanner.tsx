@@ -28,14 +28,14 @@ const HeaderBanner = () => {
           <>
             <div className="flex flex-col max-sm:items-center sm:hidden">
               <div className="flex flex-col gap-1">
-                <h4>{banner?.name}</h4>
+                <h4>{banner?.smallText}</h4>
                 <h3 className="font-bold text-4xl">{banner?.midText}</h3>
               </div>
             </div>
-
+            {/* BANNER TEXT CONTAINER */}
             <div className="flex flex-col w-auto my-auto max-sm:pl-4 gap-4 max-sm:hidden">
               <div className="flex flex-col gap-1">
-                <h4>{banner?.name}</h4>
+                <h4>{banner?.smallText}</h4>
                 <h3 className="font-bold text-4xl">{banner?.midText}</h3>
               </div>
               <h3 className="font-bold lg:text-8xl md:text-7xl sm:text-5xl text-white uppercase">
@@ -43,9 +43,10 @@ const HeaderBanner = () => {
               </h3>
               <Button className="w-fit">{banner?.buttonText}</Button>
             </div>
+            {/***************/}
+            {/* BANNER IMAGE CONTAINER */}
             <div className="relative top-[-1%] right-0 max-sm:px-6 w-[300px] max-sm:h-[400px] max-sm:w-[90%] h-auto flex max-sm:items-center">
               <Image
-                // src={urlFor(banner?.imageUrl).url()}
                 src={banner?.imageUrl}
                 fill
                 sizes="(max-width: 250px) 100%"
@@ -54,6 +55,7 @@ const HeaderBanner = () => {
                 loading="lazy"
               />
             </div>
+            {/***************/}
             <div className="sm:hidden">
               <h3 className="font-bold lg:text-8xl md:text-7xl sm:text-5xl text-white uppercase"></h3>
               <Button className="w-fit">{banner?.buttonText}</Button>
