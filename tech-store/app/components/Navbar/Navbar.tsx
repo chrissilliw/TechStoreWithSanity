@@ -44,7 +44,6 @@ const Navbar = () => {
     opened: {
       width: 20,
       rotate: -45,
-      // backgroundColor: "rgb(255, 255, 255)",
     },
   };
 
@@ -104,9 +103,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        {/* {openMenu && <MobileMenu />} */}
         <MobileMenu />
-        {/* {showCart && <Cart />} */}
         <Cart />
       </div>
     </>

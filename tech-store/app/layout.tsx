@@ -23,8 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <AuthProvider>
+          {/* ACCESS TO USE CONTEXT */}
           <StateContextProvider>
-            <Toaster />
+            <Toaster /> {/* RENDERING NOTIFICATIONS */}
             <Navbar />
             <main className="mx-auto px-6 md:px-6 max-sm:px-2 lg:max-w-6xl">
               {children}

@@ -5,14 +5,13 @@ import { RiShoppingBag3Line } from "react-icons/ri";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { motion, AnimatePresence } from "framer-motion";
-import React, { useRef } from "react";
+import React from "react";
 import { useStateContext } from "@/app/context/StateContext";
 import Image from "next/image";
 import { urlFor } from "@/app/lib/sanity";
 import getStripe from "@/app/lib/getStripe";
 
 const Cart = () => {
-  const cartRef = useRef();
   const {
     cartItems,
     showCart,
@@ -22,6 +21,7 @@ const Cart = () => {
     removeItemFromCart,
   } = useStateContext();
 
+  // ANIMATION FOR DARK DOWN BACKGROUND WHEN CART IS SHOWING
   const coverBackground = {
     closed: {
       opacity: 0,
@@ -43,7 +43,8 @@ const Cart = () => {
     },
   };
 
-  const listVariants = {
+  // ANIMATION FOR SHOWING CART
+  const cartList = {
     closed: {
       x: "100%",
       transition: {
@@ -94,6 +95,7 @@ const Cart = () => {
 
   return (
     <>
+      {/* COVER BACKGROUND CONTAINER */}
       <AnimatePresence mode="wait">
         {showCart && (
           <motion.div
@@ -106,10 +108,12 @@ const Cart = () => {
           ></motion.div>
         )}
       </AnimatePresence>
+      {/***********************/}
+      {/* CART CONTAINER */}
       <AnimatePresence mode="wait">
         {showCart && (
           <motion.div
-            variants={listVariants}
+            variants={cartList}
             initial="closed"
             animate="opened"
             exit="exit"
@@ -204,6 +208,7 @@ const Cart = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      {/*****************************/}
     </>
   );
 };

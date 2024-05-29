@@ -28,15 +28,15 @@ interface StateContextProviderProps {
 }
 
 const StateContext = createContext<StateContextType>({
-  showCart: false,
+  showCart: false, // Boolean value for showing Cart
   setShowCart: () => {},
-  openMenu: false,
+  openMenu: false, // Boolean value for showing Mobile Menu
   setOpenMenu: () => {},
-  cartItems: [],
+  cartItems: [], // Empty Array for numbers of items in Cart
   setCartItems: () => {},
-  totalPrice: 0,
+  totalPrice: 0, // Total price of Cart
   setTotalPrice: () => {},
-  totalQuantities: 0,
+  totalQuantities: 0, // Total quantity of items in Cart
   setTotalQuantities: () => {},
   quantity: 1,
   setQuantity: () => {},
@@ -62,6 +62,7 @@ export const StateContextProvider = ({
   let foundProduct: any;
   let index: number;
 
+  // Adding item to Cart
   const addItemToCart = (product: ICartItem, quantity: number) => {
     const checkProductInCart = cartItems.find(
       (item) => item._id === product._id
@@ -93,6 +94,7 @@ export const StateContextProvider = ({
     toast.success(`${quantity} ${product.name} added to the cart`);
   };
 
+  //Removing item from Cart
   const removeItemFromCart = (product: ICartItem) => {
     foundProduct = cartItems.find((item) => item._id === product._id);
     const filteredCartItems = cartItems.filter(

@@ -9,6 +9,7 @@ import NavLink from "./NavLink";
 const MobileMenu = () => {
   const { openMenu, setOpenMenu } = useStateContext();
 
+  // ANIMATION OF MOBILE MENU
   const listVariants = {
     closed: {
       x: "-100%",
@@ -34,6 +35,7 @@ const MobileMenu = () => {
     },
   };
 
+  // ANIMATION OF ITEMS ON MOBILE MENU
   const listItemVariants = {
     closed: {
       x: -50,
@@ -49,6 +51,7 @@ const MobileMenu = () => {
     },
   };
 
+  // ANIMATION FOR DARK DOWN BACKGROUND WHEN CART IS SHOWING
   const coverBackground = {
     closed: {
       opacity: 0,
@@ -71,6 +74,7 @@ const MobileMenu = () => {
   };
   return (
     <>
+      {/* COVER BACKGROUND CONTAINER */}
       <AnimatePresence mode="wait">
         {openMenu && (
           <motion.div
@@ -83,6 +87,7 @@ const MobileMenu = () => {
           ></motion.div>
         )}
       </AnimatePresence>
+      {/*MOBILE MENU CONTAINER */}
       <AnimatePresence mode="wait">
         {openMenu && (
           <motion.div

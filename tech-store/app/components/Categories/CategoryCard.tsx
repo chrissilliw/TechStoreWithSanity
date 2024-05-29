@@ -10,6 +10,7 @@ interface CategoryCardProps {
 const CategoryCard = ({ category }: CategoryCardProps) => {
   return (
     <>
+      {/* CATEGORY CONTAINER */}
       <Link href={category.slug}>
         <div className="group w-full flex justify-center items-center relative overflow-hidden">
           <div className="absolute flex flex-col justify-end items-center gap-5 h-full w-full pb-10 rounded-2xl z-10 bg-gray-900 bg-opacity-45 transition duration-1000 group-hover:bg-opacity-25">
@@ -20,6 +21,7 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
               Gå till alla produkter
             </button>
           </div>
+          {/* CATEGORY IMAGE CONTAINER */}
           <div className="relative w-full h-[450px]">
             <Image
               src={category.imageUrl}

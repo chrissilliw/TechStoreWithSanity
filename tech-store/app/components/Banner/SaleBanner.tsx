@@ -26,8 +26,8 @@ const SaleBanner = () => {
       <div className="relative w-[100%] sm:px-6 lg:max-w-6xl h-[400px] my-14 mx-auto max-sm:py-20 flex max-sm:flex-col max-sm:h-auto rounded-2xl text-white bg-[#F02D34] gap-2">
         {banner ? (
           <>
+            {/* BANNER TEXT CONTAINER */}
             <div className="flex flex-col justify-center px-8 gap-4">
-              {/* <div className="grow"></div> */}
               <div className="flex flex-col gap-4 ">
                 <p>{banner.discount}</p>
                 <h3 className="font-bold text-6xl w-min uppercase">
@@ -36,6 +36,8 @@ const SaleBanner = () => {
                 <p>{banner.smallText}</p>
               </div>
             </div>
+            {/********************/}
+            {/* BANNER IMAGE CONTAINER */}
             <div className="relative top-[-1%] right-0 w-[60%] aspect-auto h-auto mx-0 max-md:hidden">
               <Image
                 src={banner.imageUrl}
@@ -47,6 +49,7 @@ const SaleBanner = () => {
                 alt="bild"
               />
             </div>
+            {/**********************/}
             <div className="flex flex-col w-auto my-auto pl-10 gap-4">
               <p className="text-medium">{banner.product}</p>
               <h3 className="font-bold text-4xl">{banner.largeText1}</h3>

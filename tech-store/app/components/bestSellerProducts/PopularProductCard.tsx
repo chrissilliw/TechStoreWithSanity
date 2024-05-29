@@ -26,14 +26,7 @@ const PopularProductCard = ({
           <>
             <Link href={`horlurar/${product.slug}`}>
               <div className="w-full flex flex-col gap-4">
-                <div className="relative w-full h-[200px] bg-slate-400 rounded-xl">
-                  {/* <Image
-                  src={{ testImage }}
-                  layout="fill"
-                  objectFit="cotain"
-                  alt="bild"
-                /> */}
-                </div>
+                <div className="relative w-full h-[200px] bg-slate-400 rounded-xl"></div>
                 <div className="w-full flex flex-col gap-3">
                   <h4 className="text-xs text-red-400 font-semibold">
                     {product.brand}
