@@ -84,14 +84,22 @@ const Navbar = () => {
             </h1>
           </Link>
           {/* NAVBAR LINKS CONTAINER */}
-          <div className="flex max-sm:flex-col items-end h-auto gap-10 max-lg:gap-1">
+          <div className="flex max-sm:flex-col items-end h-auto gap-6 max-lg:gap-1">
             <nav className="hidden lg:flex gap-4">
               {links.map((link) => (
                 <NavLink link={link} key={link.title} />
               ))}
             </nav>
+            <div className="">|</div>
             {status === "loading" && <div>Loading...</div>}
-            {status === "authenticated" && <div>{session.user!.name}</div>}
+            {status === "authenticated" && (
+              <div>
+                {session.user!.name}{" "}
+                <Link href="/api/auth/signout" className="ml-2">
+                  Logga ut
+                </Link>
+              </div>
+            )}
             {status === "unauthenticated" && (
               <Link href="/api/auth/signin">
                 <FaRegUserCircle size={22} />
