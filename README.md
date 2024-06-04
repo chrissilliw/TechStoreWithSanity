@@ -50,7 +50,7 @@ Follow these steps to get your development environment up and running:
 * Frontend: http://localhost:3000
 * Sanity Backend: http://localhost:3333/structure
 
-  ## Frequently asked questions
+## Frequently asked questions
 
-  ### Is this project fully done?
-  No this is a firs draft of a project. 
+### Is this project fully done?
+No this is a first draft of a project. 
