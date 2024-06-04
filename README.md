@@ -1,9 +1,11 @@
-# ecommrce Store with NextJS and Sanity
+# ecommerce Store with NextJS and Sanity
+
+This project is a eCommerce Store that sells Tech products. It is built on NextJS with an integration to Stripe, and uses Google logins for customers and admin users. 
 
 ## Requirements
 
 Before you begin, ensure you have met the following requirements:
-
+* You should have Node.js 18.17 or later
 
 ## Installation
 
@@ -47,3 +49,8 @@ Follow these steps to get your development environment up and running:
 ## Accessing the Project
 * Frontend: http://localhost:3000
 * Sanity Backend: http://localhost:3333/structure
+
+  ## Frequently asked questions
+
+  ### Is this project fully done?
+  No this is a firs draft of a project. 
