@@ -1,11 +1,11 @@
-<H1>ecommrce Store with NextJS and Sanity</H1>
+# H1 ecommrce Store with NextJS and Sanity
 
-<h2>Requirements</h2>
+# H2 Requirements
 
 Before you begin, ensure you have met the following requirements:
 
 
-<h2>Installation</h2>
+# H2 Installation
 
 Follow these steps to get your development environment up and running:
 
@@ -14,7 +14,7 @@ Follow these steps to get your development environment up and running:
   ```bash
   cd techStore
   ```
-2. Clone the project repository:
+2. <strong>Clone the project repository:</strong>
 
 ```bash
 git clone https://github.com/chrissilliw/TechStoreWithSanity.git
