@@ -1,11 +1,11 @@
 # H1 ecommrce Store with NextJS and Sanity
 
-# H2 Requirements
+## Requirements
 
 Before you begin, ensure you have met the following requirements:
 
 
-# H2 Installation
+## H2 Installation
 
 Follow these steps to get your development environment up and running:
 
