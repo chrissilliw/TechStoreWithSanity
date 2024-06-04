@@ -8,7 +8,14 @@ Before you begin, ensure you have met the following requirements:
 <h2>Installation</h2>
 
 Follow these steps to get your development environment up and running:
-* Navigate to your project directory:
+1. Navigate to your project directory:
+  
   ```bash
-  cd techStore-with-sanity
+  cd techStore
   ```
+2. Clone the project repository:
+
+```bash
+git clone https://github.com/chrissilliw/TechStoreWithSanity.git
+```
+
