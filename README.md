@@ -9,43 +9,42 @@ Before you begin, ensure you have met the following requirements:
 
 Follow these steps to get your development environment up and running:
 
-1. <strong>Navigate to your project directory:</strong>
+1. **Navigate to your project directory:**
 
-2. <strong>Clone the project repository:</strong>
+2. **Clone the project repository:**
 
 ```bash
 git clone https://github.com/chrissilliw/TechStoreWithSanity.git
 ```
 
-3. Navigate to TechStoreWithSanity
-
-```bash
+3. **Navigate to TechStoreWithSanity**
+   ```bash
    cd TechStoreWithSanity
    ```
-4. Navigate to sanity-store
+4. **Navigate to sanity-store**
 ```bash
 cd sanity-store
 ```
 
-5. Install the sanity module
+5. **Install the sanity module**
 ```bash
 npm install
 ```
 
-6. Run sanity
+6. **Run sanity**
 ```bash
 npm run dev
 ````
 
-7. Navigate to NextJS module (suggestion to use new terminal)
+7. **Navigate to NextJS module (suggestion to use new terminal)**
 ```bash 
 cd TechStoreWithSanity/tech-store
 ```
-8. Install tech-store
+8. **Install tech-store**
 ```bash
 npm install
 ````
-9. Run tech-store
+9. **Run tech-store**
 ```bash
 npm run dev
 ```
