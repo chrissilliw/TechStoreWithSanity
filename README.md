@@ -9,14 +9,16 @@ Before you begin, ensure you have met the following requirements:
 
 ### Environment variables
    ```bash
-   NEXT_PRIVATE_STRIPE_SECRET_KEY={}
-   NEXT_PUBLIC_STRIPE_PUBLIC_KEY={}
-   NEXTAUT_URL=http://localhost:3000
-   NEXTAUTH_SECRET={}
-   SANITY_STUDIO_TOKEN={}
-   GOOGLE_CLIENT_ID={}
-   GOOGLE_CLIENT_SECRET={}
+   NEXT_PRIVATE_STRIPE_SECRET_KEY={your-secret-key-from-stripe}
+   NEXT_PUBLIC_STRIPE_PUBLIC_KEY={your-public-key-from-stripe}
+   NEXTAUTH_URL={your-website-url}
+   NEXTAUTH_SECRET={set-a-random-string}
+   SANITY_STUDIO_TOKEN={yout-token-from-sanity}
+   GOOGLE_CLIENT_ID={your-client-id-from-google}
+   GOOGLE_CLIENT_SECRET={your-secret-key-from-google}
    ```
+You can obtain the values for these variables by singning up for free accounts at [Sanity](https://www.sanity.io/login/sign-up?origin=https%3A%2F%2Fwww.sanity.io%2Fmanage), [Stripe](https://dashboard.stripe.com/register) and [Google](https://console.developers.google.com/apis/credentials). 
+
 
 ## Installation
 
