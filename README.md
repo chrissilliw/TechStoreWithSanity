@@ -7,6 +7,17 @@ This project is a eCommerce Store that sells Tech products. It is built on NextJ
 Before you begin, ensure you have met the following requirements:
 * You should have Node.js 18.17 or later
 
+### Environment variables
+   ```bash
+   NEXT_PRIVATE_STRIPE_SECRET_KEY={}
+   NEXT_PUBLIC_STRIPE_PUBLIC_KEY={}
+   NEXTAUT_URL=http://localhost:3000
+   NEXTAUTH_SECRET={}
+   SANITY_STUDIO_TOKEN={}
+   GOOGLE_CLIENT_ID={}
+   GOOGLE_CLIENT_SECRET={}
+   ```
+
 ## Installation
 
 Follow these steps to get your development environment up and running:
