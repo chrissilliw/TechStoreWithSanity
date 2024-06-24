@@ -62,6 +62,7 @@ Follow these steps to get your development environment up and running:
 ## Accessing the Project
 * Frontend: http://localhost:3000
 * Sanity Backend: http://localhost:3333/structure
+* Sanity admin dashboard: https://www.sanity.io/manage/personal/project/p0ii7u7c/members
 
 ## Frequently asked questions
 
